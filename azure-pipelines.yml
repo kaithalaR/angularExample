@@ -13,12 +13,13 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '12.x'
+    checkLatest: true
   displayName: "Install Node.js 12.x"
 
 - task: Npm@1
   inputs:
     command: custom
-    customCommand: 'install @angular/cli@7.3.1'
+    customCommand: 'install @angular/cli'
     workingDir: $(System.DefaultWorkingDirectory)
     verbose: false
   displayName: 'Install Angular CLI' 
